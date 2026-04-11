@@ -1,8 +1,6 @@
 ___________Syntax Analysis___________
 
-1. Item struct      {Research}
-// Meaning and how to do it? 
-// Why is it related to LR(0)
+1. Item struct      // it is (.) a dot operand added to tell the parser where to look and where we are.
 
 2. FIRST & FOLLOW Sets      {Research}
 // Meaning and how to do it?
@@ -21,7 +19,6 @@ ___________Syntax Analysis___________
 7. Build Parser States (Canonical Collection)      {Research}
 
 8. Build Parsing Tables (ACTION + GOTO)      {Research}
-//SLR or LR(1)
 
 9. Implement Shift-Reduce Parser
 

@@ -4,7 +4,7 @@
 #include <set>
 #include <map>
 #include "Item.cpp"
-#include "ContextFree_Grammar.cpp"
+#include "Grammar.cpp"
 
 using namespace std;
 

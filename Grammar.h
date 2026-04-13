@@ -48,7 +48,7 @@ inline vector <Production> grammar = {
 
 {"Row", {"{", "ExprList", "}"}},
 
-{"Row", {"ExprList"}},
+{"Row", {"Expr"}},
 
 {"ExprList", {"ExprList", ",", "Expr"}},
 

@@ -86,6 +86,8 @@ public:
                     tokens.push_back(Token(TokenType::OPERATOR, string(1, c), currentLine)); break;
                 case '[': tokens.push_back(Token(TokenType::LBRACKET, "[", currentLine)); break;
                 case ']': tokens.push_back(Token(TokenType::RBRACKET, "]", currentLine)); break;
+                case '{': tokens.push_back(Token(TokenType::LBRACE, "{", currentLine)); break;
+                case '}': tokens.push_back(Token(TokenType::RBRACE, "}", currentLine)); break;
                 case '(': tokens.push_back(Token(TokenType::LPAREN, "(", currentLine)); break;
                 case ')': tokens.push_back(Token(TokenType::RPAREN, ")", currentLine)); break;
                 case ';': case ',':

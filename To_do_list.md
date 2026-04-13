@@ -15,9 +15,9 @@
 
 8. Detect conflicts ✅
 
-9. Implement Shift-Reduce Parser
+9. Implement Shift-Reduce Parser ✅
 
-10. Parse Tree (optional)
+10. Parse Tree (optional) ✅
 
 11. Syntax Error Handling
 

@@ -24,7 +24,7 @@
 15: RowList → Row
 
 16: Row → { ExprList }
-17: Row → ExprList
+17: Row → Expr
 
 18: ExprList → ExprList , Expr
 19: ExprList → Expr

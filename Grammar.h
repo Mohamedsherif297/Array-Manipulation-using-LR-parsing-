@@ -1,7 +1,10 @@
+#ifndef GRAMMAR_H
+#define GRAMMAR_H
+
 #include <vector>
 #include <string>
-#include <iostream>
 #include <set>
+
 using namespace std;
 
 struct Production {
@@ -9,7 +12,7 @@ struct Production {
     vector<string> rhs;
 };
 
-vector <Production> grammar = {
+inline vector <Production> grammar = {
 
 {"S'", {"Program"}},
 
@@ -18,8 +21,6 @@ vector <Production> grammar = {
 {"StmtList", {"StmtList", "Stmt"}},
 
 {"StmtList", {"Stmt"}},
-
-{"StmtList", {}},
 
 {"Stmt", {"DeclStmt"}},
 
@@ -97,7 +98,7 @@ vector <Production> grammar = {
 
   
 
-set<string> terminals = {
+inline set<string> terminals = {
 
 "int","float","double","char","string",
 
@@ -113,7 +114,7 @@ set<string> terminals = {
 
   
 
-set<string> nonTerminals = {
+inline set<string> nonTerminals = {
 
 "S'","Program","StmtList","Stmt",
 
@@ -126,3 +127,5 @@ set<string> nonTerminals = {
 "Factor","Type"
 
 };
+
+#endif

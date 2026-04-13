@@ -3,9 +3,9 @@
 #include <string>
 #include <set>
 #include <vector>
-#include "Item.cpp"
+#include "Item.h"
 #include "Parser_States.cpp"
-#include "Grammar.cpp"
+#include "Grammar.h"
 
 using namespace std;
 

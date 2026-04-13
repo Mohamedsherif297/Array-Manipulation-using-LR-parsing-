@@ -5,51 +5,52 @@
 
 2: StmtList → StmtList Stmt
 3: StmtList → Stmt
-4: StmtList → ε
 
-5: Stmt → DeclStmt
-6: Stmt → AssignStmt
-7: Stmt → DeclAssignStmt
+4: Stmt → DeclStmt
+5: Stmt → AssignStmt
+6: Stmt → DeclAssignStmt
 
-8: DeclStmt → Type ID ;
-9: DeclStmt → Type ID ArrayDims ;
+7: DeclStmt → Type ID ;
+8: DeclStmt → Type ID ArrayDims ;
 
-10: AssignStmt → ID = Expr ;
-11: AssignStmt → ArrayAccess = Expr ;
+9: AssignStmt → ID = Expr ;
+10: AssignStmt → ArrayAccess = Expr ;
 
-12: DeclAssignStmt → Type ID = Expr ;
-13: DeclAssignStmt → Type ID ArrayDims = ArrayLiteral ;
+11: DeclAssignStmt → Type ID = Expr ;
+12: DeclAssignStmt → Type ID ArrayDims = ArrayLiteral ;
 
-14: ArrayLiteral → { RowList }
-15: RowList → RowList , Row
-16: RowList → Row
-17: Row → { ExprList }
-18: Row → ExprList
-19: ExprList → ExprList , Expr
-20: ExprList → Expr
+13: ArrayLiteral → { RowList }
+14: RowList → RowList , Row
+15: RowList → Row
 
-21: ArrayAccess → ID [ Expr ]
+16: Row → { ExprList }
+17: Row → ExprList
 
-22: ArrayDims → ArrayDims [ NUM ]
-23: ArrayDims → [ NUM ]
+18: ExprList → ExprList , Expr
+19: ExprList → Expr
 
-24: Expr → Expr + Term
-25: Expr → Expr - Term
-26: Expr → Term
+20: ArrayAccess → ID [ Expr ]
 
-27: Term → Term * Factor
-28: Term → Term / Factor
-29: Term → Factor
+21: ArrayDims → ArrayDims [ NUM ]
+22: ArrayDims → [ NUM ]
 
-30: Factor → ( Expr )
-31: Factor → ID
-32: Factor → NUM
-33: Factor → ArrayAccess
-34: Factor → STRING
-35: Factor → CHAR
+23: Expr → Expr + Term
+24: Expr → Expr - Term
+25: Expr → Term
 
-36: Type → int
-37: Type → float
-38: Type → double
-39: Type → char
-40: Type → string
+26: Term → Term * Factor
+27: Term → Term / Factor
+28: Term → Factor
+
+29: Factor → ( Expr )
+30: Factor → ID
+31: Factor → NUM
+32: Factor → ArrayAccess
+33: Factor → STRING
+34: Factor → CHAR
+
+35: Type → int
+36: Type → float
+37: Type → double
+38: Type → char
+39: Type → string

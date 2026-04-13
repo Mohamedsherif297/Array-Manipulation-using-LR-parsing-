@@ -1,10 +1,12 @@
+#pragma once
+
 #include <iostream>
 #include <vector>
 #include <string>
 #include <unordered_map>
 #include <cctype>
-#include "Token_Class.cpp"
-#include "Symbol_Table.cpp"
+#include "Token_Class.h"
+#include "Symbol_Table.h"
 
 
 
@@ -105,6 +107,8 @@ public:
     }
 };
 
+
+/*
 int main() {
     cout<<"Mohamed sherif"<<endl; 
     
@@ -120,3 +124,5 @@ int main() {
 
     return 0;
 }
+
+*/

@@ -1,20 +1,17 @@
+#pragma once
+
 #include <iostream>
 #include <vector>
 #include <string>
 #include <set>
 #include <map>
-#include "Item.cpp"
-#include "Grammar.cpp"
+#include "Grammar.h"
 
 using namespace std;
 
-extern vector<Production> grammar;
-extern set<string> terminals;
-extern set<string> nonTerminals;
+inline map<string, set<string>> FIRST;
 
-map<string, set<string>> FIRST;
-
-set<string> firstOfSequence(const vector<string>& seq) {
+inline set<string> firstOfSequence(const vector<string>& seq) {
     set<string> result;
     bool epsilon = true;
 
@@ -38,7 +35,7 @@ set<string> firstOfSequence(const vector<string>& seq) {
     return result;
 }
 
-void computeFIRST() {
+inline void computeFIRST() {
     bool changed = true;
 
     while (changed) {
@@ -81,7 +78,7 @@ void computeFIRST() {
 }
 
 
-void printFIRST() {
+inline void printFIRST() {
     for (auto &p : FIRST) {
         cout << "FIRST(" << p.first << ") = { ";
         for (auto &x : p.second) cout << x << " ";
@@ -90,6 +87,8 @@ void printFIRST() {
 }
 
 
+
+/*
 int main() {
     computeFIRST();
 
@@ -98,3 +97,4 @@ int main() {
 
     return 0;
 }
+    */

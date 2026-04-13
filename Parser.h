@@ -20,7 +20,6 @@ Node* parse(vector<string> input) {
     stack<Node*> nodeStack;
 
     stateStack.push(0);
-
     int index = 0;
 
     while (true) {
@@ -50,11 +49,10 @@ Node* parse(vector<string> input) {
 
         // REDUCE
         else if (action[0] == 'R') {
+
             int prodIndex = stoi(action.substr(1));
             Production p = grammar[prodIndex];
 
-            Node* newNode = new Node();
-            newNode->type = p.lhs;
 
             vector<Node*> children;
 

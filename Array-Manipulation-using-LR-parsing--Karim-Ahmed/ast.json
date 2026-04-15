@@ -1,0 +1,62 @@
+{
+  "type": "Program",
+  "children": [
+    {
+      "type": "DeclAssign",
+      "children": [
+        {
+          "type": "int",
+          "value": "int"
+        },
+        {
+          "type": "ID",
+          "value": "x"
+        },
+        {
+          "type": "Dimensions",
+          "children": [
+            {
+              "type": "NUM",
+              "value": "2"
+            },
+            {
+              "type": "NUM",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "type": "Array",
+          "children": [
+            {
+              "type": "ArrayRow",
+              "children": [
+                {
+                  "type": "NUM",
+                  "value": "1"
+                },
+                {
+                  "type": "NUM",
+                  "value": "2"
+                }
+              ]
+            },
+            {
+              "type": "ArrayRow",
+              "children": [
+                {
+                  "type": "NUM",
+                  "value": "3"
+                },
+                {
+                  "type": "NUM",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -9,7 +9,11 @@ using namespace std;
 
 int main() {
 
-    string src = "int x [2][2]= {{1,2},{3,4}};";
+    string src = "int x [2] = {1,2};"
+                 "int y [2]= {1,2};"
+                 "int z [2]= {x[0]+y[0] , x[1]+y[1]};"
+                 "int a = z[0];"
+    ;
 
     SymbolTable st;
     Lexer lexer(src, st);

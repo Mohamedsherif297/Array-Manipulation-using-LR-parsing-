@@ -5,7 +5,7 @@
       "type": "DeclAssign",
       "children": [
         {
-          "type": "int",
+          "type": "DATATYPE",
           "value": "int"
         },
         {
@@ -13,48 +13,143 @@
           "value": "x"
         },
         {
-          "type": "Dimensions",
-          "children": [
-            {
-              "type": "NUM",
-              "value": "2"
-            },
-            {
-              "type": "NUM",
-              "value": "2"
-            }
-          ]
+          "type": "ArraySize",
+          "value": 2
         },
         {
-          "type": "Array",
+          "type": "ArrayInit",
           "children": [
             {
-              "type": "ArrayRow",
-              "children": [
-                {
-                  "type": "NUM",
-                  "value": "1"
-                },
-                {
-                  "type": "NUM",
-                  "value": "2"
-                }
-              ]
+              "type": "Number",
+              "value": 1
             },
             {
-              "type": "ArrayRow",
-              "children": [
-                {
-                  "type": "NUM",
-                  "value": "3"
-                },
-                {
-                  "type": "NUM",
-                  "value": "4"
-                }
-              ]
+              "type": "Number",
+              "value": 2
             }
           ]
+        }
+      ]
+    },
+    {
+      "type": "DeclAssign",
+      "children": [
+        {
+          "type": "DATATYPE",
+          "value": "int"
+        },
+        {
+          "type": "ID",
+          "value": "y"
+        },
+        {
+          "type": "ArraySize",
+          "value": 2
+        },
+        {
+          "type": "ArrayInit",
+          "children": [
+            {
+              "type": "Number",
+              "value": 1
+            },
+            {
+              "type": "Number",
+              "value": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "DeclAssign",
+      "children": [
+        {
+          "type": "DATATYPE",
+          "value": "int"
+        },
+        {
+          "type": "ID",
+          "value": "z"
+        },
+        {
+          "type": "ArraySize",
+          "value": 2
+        },
+        {
+          "type": "ArrayInit",
+          "children": [
+            {
+              "type": "BinaryOp",
+              "operator": "+",
+              "left": 
+                {
+                  "type": "ArrayAccess",
+                  "array": "x",
+                  "index": 
+                    {
+                      "type": "Number",
+                      "value": 0
+                    }
+                },
+              "right": 
+                {
+                  "type": "ArrayAccess",
+                  "array": "y",
+                  "index": 
+                    {
+                      "type": "Number",
+                      "value": 0
+                    }
+                }
+            },
+            {
+              "type": "BinaryOp",
+              "operator": "+",
+              "left": 
+                {
+                  "type": "ArrayAccess",
+                  "array": "x",
+                  "index": 
+                    {
+                      "type": "Number",
+                      "value": 1
+                    }
+                },
+              "right": 
+                {
+                  "type": "ArrayAccess",
+                  "array": "y",
+                  "index": 
+                    {
+                      "type": "Number",
+                      "value": 1
+                    }
+                }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "DeclAssign",
+      "children": [
+        {
+          "type": "DATATYPE",
+          "value": "int"
+        },
+        {
+          "type": "ID",
+          "value": "a"
+        },
+        {
+          "type": "ArrayAccess",
+          "array": "z",
+          "index": 
+            {
+              "type": "Number",
+              "value": 0
+            }
         }
       ]
     }

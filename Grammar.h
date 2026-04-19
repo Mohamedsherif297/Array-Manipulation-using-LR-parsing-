@@ -40,63 +40,47 @@ inline vector <Production> grammar = {
 
 {"DeclAssignStmt", {"Type", "ID", "ArrayDims", "=", "ArrayLiteral", ";"}},
 
-{"ArrayLiteral", {"{", "RowList", "}"}},
 
-{"RowList", {"RowList", ",", "Row"}},
+{"ArrayLiteral", {"{", "ArrayElements", "}"}}, 
+{"ArrayElements", {"ArrayElements", ",", "ArrayElement"}}, 
+{"ArrayElements", {"ArrayElement"}}, 
+{"ArrayElement", {"Expr"}}, 
+{"ArrayElement", {"ArrayLiteral"}},
 
-{"RowList", {"Row"}},
 
-{"Row", {"{", "ExprList", "}"}},
+{"ArrayAccess", {"ArrayAccess", "[", "Expr", "]"}},
+{"ArrayAccess", {"ID", "[", "Expr", "]"}}, 
 
-{"Row", {"Expr"}},
+
 
 {"ExprList", {"ExprList", ",", "Expr"}},
-
 {"ExprList", {"Expr"}},
 
-{"ArrayAccess", {"ID", "[", "Expr", "]"}},
-
 {"ArrayDims", {"ArrayDims", "[", "NUM", "]"}},
-
 {"ArrayDims", {"[", "NUM", "]"}},
 
 {"Expr", {"Expr", "+", "Term"}},
-
 {"Expr", {"Expr", "-", "Term"}},
-
 {"Expr", {"Term"}},
 
 {"Term", {"Term", "*", "Factor"}},
-
 {"Term", {"Term", "/", "Factor"}},
-
 {"Term", {"Factor"}},
 
 {"Factor", {"(", "Expr", ")"}},
-
 {"Factor", {"ID"}},
-
 {"Factor", {"NUM"}},
-
 {"Factor", {"ArrayAccess"}},
-
 {"Factor", {"STRING"}},
-
 {"Factor", {"CHAR"}},
 
 {"Type", {"int"}},
-
 {"Type", {"float"}},
-
 {"Type", {"double"}},
-
 {"Type", {"char"}},
-
 {"Type", {"string"}}
 
 };
-
-  
 
 inline set<string> terminals = {
 
@@ -112,19 +96,17 @@ inline set<string> terminals = {
 
 };
 
-  
-
 inline set<string> nonTerminals = {
 
 "S'","Program","StmtList","Stmt",
 
 "DeclStmt","AssignStmt","DeclAssignStmt",
 
-"ArrayLiteral","RowList","Row","ExprList",
+"ArrayLiteral","ArrayElements","ArrayElement",
 
 "ArrayAccess","ArrayDims","Expr","Term",
 
-"Factor","Type"
+"Factor","Type","ExprList"
 
 };
 
